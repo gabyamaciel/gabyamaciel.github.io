@@ -1,0 +1,30 @@
+# Dependencias
+node_modules/
+
+# Build
+dist/
+dist-ssr/
+*.local
+
+# Pruebas
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variables de entorno (nunca subas secretos)
+.env
+.env.*
+!.env.example
+
+# Cachés de herramientas
+*.tsbuildinfo
+.eslintcache
+
+# Editores
+.vscode/
+.idea/
+
+# macOS
+.DS_Store

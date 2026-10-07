@@ -1,0 +1,22 @@
+:root {
+  /* Color */
+  --color-bg: #fafaf7;
+  --color-surface: #ffffff;
+  --color-chip: #f0efea;
+  --color-border: #e6e5df;
+  --color-border-strong: #d6d5ce;
+  --color-border-dashed: #b9b8b0;
+  --color-ink: #16181d;
+  --color-muted: #565d6b;
+  --color-accent: #b79ced; /* lila, para fondos y botones (texto oscuro encima) */
+  --color-accent-ink: #6a3fc4; /* lila profundo, para texto sobre fondo claro */
+
+  /* Tipografía */
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Forma y layout */
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --container: 1120px;
+}
