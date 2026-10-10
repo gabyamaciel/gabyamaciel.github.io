@@ -11,6 +11,8 @@ export interface Profile {
   linkedinLabel: string;
   githubUrl: string;
   githubLabel: string;
+  /** Enlace para agendar una llamada (Calendly, Cal.com...). Vacío = no se muestra el botón. */
+  bookingUrl: string;
 }
 
 export interface Stat {

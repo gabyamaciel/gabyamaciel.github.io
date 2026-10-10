@@ -1,6 +1,10 @@
 import { profile } from '../data/profile';
 
-export function Contact() {
+interface ContactProps {
+  bookingUrl?: string;
+}
+
+export function Contact({ bookingUrl = profile.bookingUrl }: ContactProps) {
   return (
     <section id="contacto" className="section--accent">
       <div className="container contact">
@@ -10,9 +14,16 @@ export function Contact() {
           Escríbeme con una breve descripción de lo que necesitas y te respondo con los siguientes
           pasos.
         </p>
-        <a className="btn btn--white" href={`mailto:${profile.email}`}>
-          {profile.email}
-        </a>
+        <div className="contact__actions">
+          <a className="btn btn--white" href={`mailto:${profile.email}`}>
+            {profile.email}
+          </a>
+          {bookingUrl && (
+            <a className="btn btn--outline" href={bookingUrl}>
+              Agenda una llamada
+            </a>
+          )}
+        </div>
         <div className="contact__links">
           <a className="contact__link" href={profile.githubUrl}>
             {profile.githubLabel}

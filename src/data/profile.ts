@@ -13,6 +13,7 @@ export const profile: Profile = {
   linkedinLabel: 'LinkedIn · gabriela-alvarez-maciel',
   githubUrl: 'https://github.com/gabyamaciel',
   githubLabel: 'GitHub · gabyamaciel',
+  bookingUrl: 'https://calendly.com/amacielgabriela/30min',
 };
 
 export const stats: Stat[] = [

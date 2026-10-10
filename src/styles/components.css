@@ -425,6 +425,12 @@
   font-size: 19px;
 }
 
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .contact__links {
   display: flex;
   flex-wrap: wrap;

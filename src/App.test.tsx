@@ -1,6 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { App } from './App';
+import { Contact } from './components/Contact';
 import { Projects } from './components/Projects';
 import { profile } from './data/profile';
 import type { Project } from './types';
@@ -41,13 +42,13 @@ describe('App', () => {
 });
 
 describe('Projects', () => {
-  it('muestra "Próximamente" cuando no hay proyectos', () => {
-    render(<Projects projects={[]} />);
+  it('no muestra la sección cuando no hay proyectos', () => {
+    const { container } = render(<Projects projects={[]} />);
 
-    expect(screen.getByText('Próximamente')).toBeInTheDocument();
+    expect(container).toBeEmptyDOMElement();
   });
 
-  it('muestra los proyectos con sus enlaces y oculta "Próximamente"', () => {
+  it('muestra los proyectos con sus enlaces', () => {
     const sample: Project[] = [
       {
         title: 'Proyecto de prueba',
@@ -70,6 +71,22 @@ describe('Projects', () => {
       'href',
       'https://example.com/repo',
     );
-    expect(screen.queryByText('Próximamente')).not.toBeInTheDocument();
+  });
+});
+
+describe('Contact', () => {
+  it('no muestra el botón de agendar si no hay enlace', () => {
+    render(<Contact bookingUrl="" />);
+
+    expect(screen.queryByRole('link', { name: 'Agenda una llamada' })).not.toBeInTheDocument();
+  });
+
+  it('muestra el botón de agendar cuando hay enlace', () => {
+    render(<Contact bookingUrl="https://cal.com/ejemplo" />);
+
+    expect(screen.getByRole('link', { name: 'Agenda una llamada' })).toHaveAttribute(
+      'href',
+      'https://cal.com/ejemplo',
+    );
   });
 });

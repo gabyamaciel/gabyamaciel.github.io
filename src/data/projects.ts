@@ -4,7 +4,7 @@ import type { Project } from '../types';
  * Proyectos personales.
  *
  * Para agregar uno, añade un objeto a este arreglo. Mientras esté vacío,
- * la sección muestra la tarjeta "Próximamente".
+ * la sección completa se oculta; aparece sola al agregar el primero.
  *
  * Ejemplo:
  *

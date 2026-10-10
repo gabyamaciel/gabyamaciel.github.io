@@ -68,7 +68,15 @@ Edita `src/data/projects.ts` y agrega un objeto al arreglo:
 },
 ```
 
-Mientras el arreglo esté vacío, la sección muestra la tarjeta "Próximamente". Al hacer push a `main`, el sitio se actualiza solo.
+Mientras el arreglo esté vacío, la sección de proyectos no se muestra; aparece sola al agregar el primero. Al hacer push a `main`, el sitio se actualiza solo.
+
+## Botón para agendar una llamada
+
+En `src/data/profile.ts`, pega tu enlace de Calendly o Cal.com en `bookingUrl`. Mientras esté vacío, el botón "Agenda una llamada" no se muestra.
+
+## Imagen de vista previa
+
+`public/og-image.png` (1200×630) es la imagen que aparece al compartir el enlace en LinkedIn y otras redes. Si la cambias, LinkedIn guarda la anterior en caché: pega el enlace en LinkedIn Post Inspector para que la actualice.
 
 ## Despliegue
 
